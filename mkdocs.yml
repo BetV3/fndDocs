@@ -1,0 +1,4 @@
+site_name: FND docs
+site_url: https://docs-fnd.betv3.xyz
+theme: 
+  name: material
