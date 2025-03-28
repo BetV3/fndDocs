@@ -2,3 +2,12 @@ site_name: FND docs
 site_url: https://docs-fnd.betv3.xyz
 theme: 
   name: material
+nav:
+  - Home: index.md
+  - Registration: 
+    - Overview: registration/index.md
+    - CLI Workflow: registration/cli-workflow.md
+    - Data Flow: registration/data-flow.md
+extra:
+  css_files:
+    - css/extra.css
