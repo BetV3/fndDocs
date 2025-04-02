@@ -7,6 +7,6 @@ files:
 file_exists_behavior: OVERWRITE
 hooks:
   ApplicationStart:
-    - location: /opt/restart_nginx.sh
+    - location: scripts/restart_nginx.sh
       timeout: 300
       runas: root
