@@ -8,6 +8,7 @@ nav:
     - Overview: registration/index.md
     - CLI Workflow: registration/cli-workflow.md
     - Data Flow: registration/data-flow.md
+    - Add Device: registration/add-device.md
 extra:
   css_files:
     - css/extra.css
