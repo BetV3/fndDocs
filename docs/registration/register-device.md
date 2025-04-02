@@ -77,7 +77,7 @@ Once the build is complete, you can run the CSMP Agent sample. There are two way
 
 ### 7.1. Basic Run
 
-If your environment is properly set up, you can start the agent in debug mode by running:
+If your environment is properly set up, you can start the agent by running:
 
 ```bash
 ./CsmpAgentLib_sample -d
