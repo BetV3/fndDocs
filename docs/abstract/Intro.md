@@ -93,9 +93,3 @@ Providing automated IP address assignment and management for both IPv4 and IPv6 
 ### Third-party applications (North Bound API)
 
 Within the documentation they are referencing many different types of applications. Mainly, applications that are used within the Management and monitoring of the Field area network and the FND. These applications will then interact with the FND through the NorthBound API. The NorthBound API works directly with the NMS database. It can retrieve data from the FND and help upload configurations and new devices through SOAP XML messages.
-
-| application    | description                          |       
-|------------|------------------------------------------|
-| Third-party applications (North Bound API)     | Within the documentation they are referencing many different types of applications. Mainly, applications that are used within the Managemetn and monitoring of the Field area network and the FND. One of these applications is the North Bound API. This API is specifically used to make requests to the NMS Database for the information that is within. It has read-only access.                        | 
-| CPNR (DHCP Server) | Providing automated IP address assignment and management for both IPv4 and IPv6 network. Makes it easier to streamline network operations       | 
-| Go         | Robert Griesemer, Rob Pike, and Ken Thompson |
