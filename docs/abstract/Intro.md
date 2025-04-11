@@ -10,12 +10,12 @@ IoT FND is built on a layered system architecture to enable clear separation bet
 
 ## Features
 
--"Geographic Information System (GIS) map-based, visualization, monitoring, troubleshooting, and alarm notifications"
--"Group-based configuration management for routers and smart meter endpoints"
--"OS compatible (Cisco IOS, Guest OS, IOx) and provides application management"
--"Rule-engine infrastructure for customizable threshold-based alarm processing and event generation"
--"North Bound API for transparent integration with utility head-end and operational systems"
--"High availability and disaster recovery"
+- "Geographic Information System (GIS) map-based, visualization, monitoring, troubleshooting, and alarm notifications"
+- "Group-based configuration management for routers and smart meter endpoints"
+- "OS compatible (Cisco IOS, Guest OS, IOx) and provides application management"
+- "Rule-engine infrastructure for customizable threshold-based alarm processing and event generation"
+- "North Bound API for transparent integration with utility head-end and operational systems"
+- "High availability and disaster recovery"
 
 
 # Architecture
