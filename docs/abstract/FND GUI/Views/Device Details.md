@@ -1,6 +1,6 @@
 # Device view
 
-(Information high-lighted can be found within [Managing Devices](https://www.cisco.com/c/en/us/td/docs/routers/connectedgrid/iot_fnd/guide/5_0/b-iot-fnd-user-guide-50/m-device-management-sample.html)
+(Information high-lighted can be found within [Managing Devices](https://www.cisco.com/c/en/us/td/docs/routers/connectedgrid/iot_fnd/guide/5_0/b-iot-fnd-user-guide-50/m-device-management-sample.html))
 
 Considering there are so many different things to view and manage when it comes to our own personal devices, it's best to look into the view itself
 
