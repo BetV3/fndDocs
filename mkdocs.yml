@@ -4,6 +4,8 @@ theme:
   name: material
 nav:
   - Home: index.md
+  - Properties:
+    - Device Properties: properties/air_pollution_meter_properties.md
   - Registration: 
     - Overview: registration/index.md
     - CLI Workflow: registration/cli-workflow.md
