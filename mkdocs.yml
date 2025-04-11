@@ -4,6 +4,18 @@ theme:
   name: material
 nav:
   - Home: index.md
+  - Abstract:
+    - FND GUI:
+      - Admin: views/Admin.md
+      - Apps: views/Apps.md
+      - Config: views/Config.md
+      - Dashboard: views/Dashboard.md
+      - Device Details: views/Device Details.md
+      - Devices: views/Devices.md
+    - FND Server
+      - Overview: Overview.md
+      - Quick Start: QuickStart.md
+      - Types of Deployment: Types of Deployment.md
   - Properties:
     - Device Properties: properties/air_pollution_meter_properties.md
   - Registration: 
