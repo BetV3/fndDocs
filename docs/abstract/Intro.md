@@ -22,7 +22,7 @@ IoT FND is built on a layered system architecture to enable clear separation bet
 
 Cisco's FND has a straightforward way of doing it's architecture. A more detailed explanation is within the documentation under ["IoT FND architecture"](https://www.cisco.com/c/en/us/td/docs/routers/connectedgrid/iot_fnd/guide/5_0/b-iot-fnd-user-guide-50/m-overview-of-cisco-iot-field-network-director.html?bookSearch=true)
 
-![Overview of Cisco's FND](images/overview.png)
+![Overview of Cisco's FND](../images/overview.png)
 
 
 ## Endpoints and the Field Area Router
