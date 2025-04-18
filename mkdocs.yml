@@ -15,6 +15,9 @@ nav:
     - Overview: Overview.md
   - Properties:
     - Device Properties: properties/air_pollution_meter_properties.md
+  - Possible Extract of Data:
+    - CoAP: custom_data/coap.md
+    - Hacky (Unofficial API): custom_data/hacky.md
   - Registration: 
     - Overview: registration/index.md
     - CLI Workflow: registration/cli-workflow.md
