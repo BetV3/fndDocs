@@ -13,7 +13,7 @@ IoT FND is built on a layered system architecture to enable clear separation bet
 - "Geographic Information System (GIS) map-based, visualization, monitoring, troubleshooting, and alarm notifications"
 - "Group-based configuration management for routers and smart meter endpoints"
 - "OS compatible (Cisco IOS, Guest OS, IOx) and provides application management"
-- "Rule-engine infrastructure for customizable threshold-based alarm processing and event generation"
+- "Rule-engine infrastructure for customizable threshold-based alarm processing and event generation (only works for Cisco approved devices at this current moment"
 - "North Bound API for transparent integration with utility head-end and operational systems"
 - "High availability and disaster recovery"
 
@@ -27,9 +27,11 @@ Cisco's FND has a straightforward way of doing it's architecture. A more detaile
 
 ## Endpoints and the Field Area Router
 
+The below information is defined to help you have context as you read throughout the documentation. Please keep in mind the definitions for the architecture so your understanding of the operations available within this technology can be accurate.
+
 ### Field Area Router (FAR)
 
-THe field area router is a router that routes data collected from numerous endpoint devices. It routes this data to a central network (within this case, it routes it to the HER that is is connected to). 
+The field area router is a router that routes data collected from numerous endpoint devices. It routes this data to a central network (within this case, it routes it to the HER that it is connected to). 
 
 ### Mesh endpoints
 
@@ -37,10 +39,10 @@ The mesh endpoint devices can range drastically. There are many Cisco devices, t
 
 ## DMZ
 
-The DMZ is a zone that you can send your data from the FARs during a production environment to add an extra layer of security to the data which you are sending It has two parts
+The DMZ is a zone that you can send your data from the FARs during a production environment to add an extra layer of security to the data which you send. It has two parts.
 
 ### RA
-The RA ensures that direct communication between external devices (like FARs) and the internal CA server is avoided, enhancing the security posture of the network.
+The RA (Registration authority) ensures that direct communication between external devices (like FARs) and the internal CA server is avoided, enhancing the security posture of the network.
 
 When a FAR is deployed and powered on, it initiates a certificate request using the Simple Certificate Enrollment Protocol (SCEP). The RA, residing in the DMZ, receives this request and forwards it to the internal CA server.​
 
@@ -49,21 +51,21 @@ Once the CA issues the certificate, the RA relays it back to the FAR. From here 
 
 ### Tunnel Provisioning Server (TPS)
 
-The TPS servesr as the final proxy between the FAR and the FND server. You can do a *swath* of configuration when it coems to the tunnel you are creating. 
+The TPS servesr as the final proxy between the FAR and the FND server. You can do a *swath* of configuration when it comes to the tunnel you are creating. 
 
-When the FAR makes a requrest to the TPS, it will forward this request ot eh IoT FND application server. The security that allows for the request to pass is based on whether or not the FAR has recieved proper certification through the RA after it has requested this certification through the CA server. There is a way to do certification without having to request from the CA server through a PKI (public key infrastructure certificate). This certificate has its own template you can generate and then apply to your FAR and any related devices within the Tunnel, which would allow you to not need a CA server to grant certificates to allow for secure messaging.
+When the FAR makes a request to the TPS, it will forward this request to the IoT FND application server. The security that allows for the request to pass is based on whether or not the FAR has recieved proper certification through the RA after it has requested this certification through the CA server. There is a way to do certification without having to request from the CA server through a PKI (public key infrastructure certificate). This certificate has its own template you can generate and then apply to your FAR and any related devices within the Tunnel, which would allow you to not need a CA server to grant certificates to allow for secure messaging.
 
 ## Head-end router, Firewall, and CA Server
 
 ### Head-end router
 
-The head-end router is the central aggrigation point for hte network. To give an idea, you can have around 500 different FARs for one HER. The point of the HER is to aggrigation traffic and forward it to different branches within the FND. If your HER is within an High-availaibilty depoloyment, it would send its traffic to a load-balancer, which would then decide which FND Server the data will go to. 
+The head-end router is the central aggrigation point for the network. To give you an idea of how central, within a high-availability architecture (that is, one where you balance out your network through a load-balancer), you can have around 500 different FARs for one HER. The point of the HER is to aggregate traffic and forward it to the FND server (or to a load-balancer that then sends the traffic to one of many different FND servers).
 
 The HER acts as a gateway bridge between the FND, the FARs, and the endpoint mesh devices. It ensures the data flow is as efficient as possible.
 
 ### Firewall
 
-The firewall regulates traffice between the HERs, the DMZ, and the Tunnel provisioning Server (TPS). It makes sur that only authorized communication with the FND occurs.
+The firewall regulates traffic between the HERs, the DMZ, and the Tunnel provisioning Server (TPS). It makes sure that only authorized communication with the FND occurs.
 
 ### CA Server
 
