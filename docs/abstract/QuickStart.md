@@ -12,10 +12,13 @@ There are a few things we noticed while doing our installation that might be use
 If you are trying to install a server on multiple devices throughout a network, you may run into an issue when it comes to your device IDs. One way we resolved this was through removing our old IDs and generating new ones:
 
 // Remove old id
+
 sudo rm /etc/machine-id
 
 // generate new machine id
+
 dbus-uuidgen --ensure
+
 sudo systemd-machine-id-setup
 
 2. Check server logs.
